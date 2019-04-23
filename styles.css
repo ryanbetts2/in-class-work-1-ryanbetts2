@@ -14,65 +14,20 @@ nav {
   background-color: red;
 }
 
-header {
-  background-color: blue;
-  font-size: 24px;
-  height: 300px;
-}
-
-section {
-  color: green;
-}
-
-p {
-  text-align: center;
-  width: 550px;
-}
-
-footer {
-  background-color: fuchsia;
-}
-
-.attention {
-  background-color: cornflowerblue;
-}
-
-#test {
-  height: 20vh;
-  width: 80vw;
-  background: lightsalmon;
-}
-
 section p {
   background: blanchedalmond;
 }
 
-p > span {
+p>span {
   background-color: ivory;
 }
 
-span > span {
+span>span {
   background: rebeccapurple;
 }
 
-p + p {
+p+p {
   background: yellowgreen;
-}
-
-p ~ img {
-  border: solid 3px hotpink;
-}
-
-.test1 {
-  background: gainsboro;
-}
-
-#important {
-  background: black;
-}
-
-.test2 {
-  background: orange;
 }
 
 img:nth-child(even) {
@@ -83,6 +38,27 @@ img:nth-child(odd) {
   border: solid 3px gold;
 }
 
-p {
-  background: red;
+/* Contact Form */
+form>div {
+  margin: 10px 0;
+}
+
+form p {
+  margin-bottom: 5px;
+}
+
+label+input {
+  margin-left: 5px;
+}
+
+span+span {
+  margin-left: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
 }
