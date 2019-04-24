@@ -38,7 +38,7 @@
       <div>
         <p>What's this message about?</p>
 
-        <div>
+        <span>
           <input
             type="radio"
             name="subject"
@@ -47,16 +47,16 @@
             checked
           />
           <label for="pro">I'd like to hire you!</label>
-        </div>
+        </span>
 
-        <div>
+        <span>
           <input type="radio" name="subject" value="personal" id="personal" />
           <label for="personal">Personal message</label>
-        </div>
-        <div>
+        </span>
+        <span>
           <input type="radio" name="subject" value="other" />
           <label>Don't know/something else</label>
-        </div>
+        </span>
       </div>
       <div>
         <input type="checkbox" name="optin" value="trusting" checked />Subscribe
@@ -82,8 +82,10 @@
         </select>
       </div>
 
-      <input type="submit" value="Send Message" />
-      <input type="reset" value="Clear Form" />
+      <div>
+        <input type="submit" value="Send Message" />
+        <input type="reset" value="Clear Form" />
+      </div>
     </form>
   </body>
 </html>
