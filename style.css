@@ -8,13 +8,22 @@ h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-nav {
-  background-color: red;
-}
-
 header {
   font-size: 24px;
   height: 300px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .flex {
@@ -23,6 +32,10 @@ header {
 
 .flex--column {
   flex-direction: column;
+}
+
+.justify-space-between {
+  justify-content: space-between;
 }
 
 /* Form */
@@ -48,4 +61,24 @@ form p {
 
 form > div + div {
   margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+}
+
+nav li {
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+#dropdown {
+  display: none;
+  position: absolute;
+}
+
+li:hover #dropdown {
+  display: block;
 }
