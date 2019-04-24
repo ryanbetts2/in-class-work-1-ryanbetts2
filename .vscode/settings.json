@@ -17,10 +17,5 @@
   "editor.fontFamily": "'Inconsolata', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "better-comments.highlightPlainText": true,
-  "eslint.autoFixOnSave": true,
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#0A3331",
-    "titleBar.activeBackground": "#0E4844",
-    "titleBar.activeForeground": "#F1FCFC"
-  }
+  "eslint.autoFixOnSave": true
 }
