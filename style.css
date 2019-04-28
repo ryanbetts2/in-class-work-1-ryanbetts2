@@ -40,6 +40,10 @@ main img:first-of-type {
   shape-outside: ellipse();
 }
 
+main > section:first-of-type {
+  border-top: solid 3px rebeccapurple;
+}
+
 /* Limit the width of text for better readability. */
 p {
   max-width: 768px;
