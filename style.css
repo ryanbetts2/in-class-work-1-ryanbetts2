@@ -11,6 +11,13 @@ h1 {
 a {
   text-decoration: none;
 }
+
+/* Select any link that has an attribute 'href' that STARTS WITH 'tel'. */
+
+a[href^="tel"] {
+  color: yellow;
+}
+
 main {
   background: rgba(255, 255, 255, 0.5);
   padding: 10px;
