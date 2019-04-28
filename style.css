@@ -58,7 +58,8 @@ li {
   list-style: none;
 }
 
-footer, nav {
+footer,
+nav {
   padding: 10px 0;
 }
 
@@ -76,16 +77,16 @@ footer li {
   background: rgba(0, 0, 0, 0.6);
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 960px;
-  width: 80vw;
-}
-
 /* Utility classes */
 
 .align-items-top {
   align-items: flex-start;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 80vw;
 }
 
 .flex {
