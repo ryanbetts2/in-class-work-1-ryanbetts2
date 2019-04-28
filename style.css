@@ -1,19 +1,16 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-h1, h2, p {
-  margin: 5px 0;
+header {
+  font-size: 24px;
+  padding: 15px;
 }
 
-/* Limit the width of text for better readability. */
-
+h1,
+h2,
 p {
-  max-width: 768px;
-}
-
-section {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 h1 {
@@ -26,7 +23,6 @@ a {
 }
 
 /* Select any link that has an attribute 'href' that STARTS WITH 'tel'. */
-
 a[href^="tel"] {
   color: yellow;
 }
@@ -44,9 +40,13 @@ main img:first-of-type {
   shape-outside: ellipse();
 }
 
-header {
-  font-size: 24px;
-  padding: 15px;
+/* Limit the width of text for better readability. */
+p {
+  max-width: 768px;
+}
+
+section {
+  margin: 10px 0;
 }
 
 ul {
@@ -69,7 +69,8 @@ footer li {
 }
 
 #bg-container {
-  background: url("https://www.indiewire.com/wp-content/uploads/2017/03/star-trek-deep-space-nine.jpg") center center no-repeat;
+  background: url("https://www.indiewire.com/wp-content/uploads/2017/03/star-trek-deep-space-nine.jpg")
+    center center no-repeat;
   background-size: cover;
 }
 
@@ -82,7 +83,6 @@ footer li {
 }
 
 /* Utility classes */
-
 .align-items-top {
   align-items: flex-start;
 }
@@ -116,7 +116,6 @@ footer li {
 }
 
 /* Navigation */
-
 nav {
   position: sticky;
   top: 0;
@@ -137,16 +136,15 @@ li:hover #dropdown {
 }
 
 /* Form */
-
 input {
   margin-left: 5px;
 }
 
-span+span {
+span + span {
   margin-left: 15px;
 }
 
-form span+div {
+form span + div {
   margin-top: 15px;
 }
 
@@ -158,7 +156,7 @@ form p {
   margin-bottom: 5px;
 }
 
-form>div+div {
+form > div + div {
   margin-top: 10px;
 }
 
@@ -166,7 +164,7 @@ form>div+div {
   .flex--md {
     display: flex;
   }
-  .flex--md section+section {
+  .flex--md section + section {
     margin-left: 15px;
   }
 }
