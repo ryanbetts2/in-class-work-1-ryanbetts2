@@ -101,7 +101,7 @@ footer li {
   display: flex;
 }
 
-.flex--column {
+.flex-column {
   flex-direction: column;
 }
 
