@@ -107,6 +107,10 @@ li:hover #dropdown {
 
 /* Utility classes */
 
+.align-items-top {
+  align-items: flex-start;
+}
+
 .flex {
   display: flex;
 }
