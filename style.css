@@ -58,6 +58,50 @@ li {
   width: 80vw;
 }
 
+/* Utility classes */
+
+.align-items-top {
+  align-items: flex-start;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flt-lft {
+  float: left;
+  margin-right: 15px;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+/* Navigation */
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+nav li {
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+
+#dropdown {
+  display: none;
+  position: absolute;
+}
+
+li:hover #dropdown {
+  display: block;
+}
+
 /* Form */
 
 input {
@@ -82,48 +126,4 @@ form p {
 
 form>div+div {
   margin-top: 10px;
-}
-
-/* Navigation */
-
-nav {
-  position: sticky;
-  top: 0;
-}
-
-nav li {
-  margin: 0 20px;
-  text-transform: uppercase;
-}
-
-#dropdown {
-  display: none;
-  position: absolute;
-}
-
-li:hover #dropdown {
-  display: block;
-}
-
-/* Utility classes */
-
-.align-items-top {
-  align-items: flex-start;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex--column {
-  flex-direction: column;
-}
-
-.flt-lft {
-  float: left;
-  margin-right: 15px;
-}
-
-.justify-space-between {
-  justify-content: space-between;
 }
