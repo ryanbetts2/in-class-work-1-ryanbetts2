@@ -8,6 +8,11 @@ p {
   margin: 5px 0;
 }
 
+/* Limit the width of text for better readability. */
+p {
+  max-width: 768px;
+}
+
 section {
   margin: 10px 0;
 }
