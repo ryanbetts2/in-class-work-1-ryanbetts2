@@ -2,13 +2,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
-p {
+h1, h2, p {
   margin: 5px 0;
 }
 
 /* Limit the width of text for better readability. */
+
 p {
   max-width: 768px;
 }
@@ -41,7 +40,6 @@ main img:first-of-type {
   border: inset 3px yellow;
   border-radius: 50%;
   box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.25);
-
   /* Control 'shape' of how text is wrapping. */
   shape-outside: ellipse();
 }
