@@ -101,6 +101,11 @@ footer li {
   margin-right: 15px;
 }
 
+.important {
+  color: rebeccapurple;
+  text-transform: uppercase;
+}
+
 .justify-space-between {
   justify-content: space-between;
 }
