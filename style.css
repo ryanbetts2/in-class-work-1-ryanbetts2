@@ -32,6 +32,7 @@ main {
   padding: 15px 25px;
 }
 
+/* Go into <main>. Find ANY child that is an <img>, but only grab the first one that you find. */
 main img:first-of-type {
   border: inset 3px yellow;
   border-radius: 50%;
