@@ -180,11 +180,18 @@
 
       // Check IF name is a 'blank' String
       // REFACTOR the 'error check' into a 'function'
+
+      // This is a FUNCTION DECLARATION
       function checkName() {
         if (name === "") {
           name = prompt("Really, what is your name?");
         }
       }
+
+      // FUNCTION EXPRESSION
+      // let checkName = function() {
+
+      // }
 
       checkName();
 
