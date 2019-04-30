@@ -178,8 +178,13 @@
       // Create `prompt` to ask for name
       let name = prompt("What is your name?");
 
+      // Check IF name is a 'blank' String
+      if (name === "") {
+        name = prompt("Really, what is your name?");
+      }
+
       // Use `alert` to say hello to the user, using the name they put in
-      alert(`Hello ${name}!`);
+      alert(`Hello ${name}!`); // "Hello, " + name
     </script>
   </body>
 </html>
