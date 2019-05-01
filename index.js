@@ -22,5 +22,4 @@ function checkName(nameStr){
 // We capture what is RETURNED by checkName and overwrite 'name' with that value;
 name = checkName(name);
 
-// Use `alert` to say hello to the user, using the name they put in
-alert(`Hello ${name}!`); // "Hello, " + name
+document.querySelector('h1').textContent = name;
