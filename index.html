@@ -183,18 +183,17 @@
       // Normally, we can avoid using the same name for a LOCAL parameter as a GLOBAL VARIABLE.
       function checkName(nameStr) {
         if (nameStr === "") {
+          // IF the name is blank, ask again and be sure to capture/overwrite the value of nameStr
           nameStr = prompt("Really, what is your name?");
+
+          // RECURSION - Fxn. calls itself again
+          nameStr = checkName(nameStr);
         }
         return nameStr;
       }
 
       // FUNCTION EXPRESSION
-      // let checkName = function() {
-
-      // }
-
-      // Check IF name is a 'blank' String
-      // REFACTOR the 'error check' into a 'function'
+      // let checkName = function() { // Function code }
 
       // We capture what is RETURNED by checkName and overwrite 'name' with that value;
       name = checkName(name);
