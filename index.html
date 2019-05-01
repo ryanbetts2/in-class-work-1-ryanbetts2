@@ -176,10 +176,8 @@
 
     <script>
       // Create `prompt` to ask for name
+      // 'name' is here as a GLOBAL VARIABLE that 'anyone' in the <script> can freely access and modify.
       let name = prompt("What is your name?");
-
-      // Check IF name is a 'blank' String
-      // REFACTOR the 'error check' into a 'function'
 
       // This is a FUNCTION DECLARATION
       function checkName() {
@@ -192,6 +190,9 @@
       // let checkName = function() {
 
       // }
+
+      // Check IF name is a 'blank' String
+      // REFACTOR the 'error check' into a 'function'
 
       checkName();
 
