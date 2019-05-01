@@ -185,6 +185,7 @@
         if (name === "") {
           name = prompt("Really, what is your name?");
         }
+        return name;
       }
 
       // FUNCTION EXPRESSION
@@ -195,7 +196,8 @@
       // Check IF name is a 'blank' String
       // REFACTOR the 'error check' into a 'function'
 
-      checkName(name);
+      // We capture what is RETURNED by checkName and overwrite 'name' with that value;
+      name = checkName(name);
 
       // Use `alert` to say hello to the user, using the name they put in
       alert(`Hello ${name}!`); // "Hello, " + name
