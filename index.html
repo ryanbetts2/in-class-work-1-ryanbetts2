@@ -181,11 +181,11 @@
 
       // This is a FUNCTION DECLARATION
       // Normally, we can avoid using the same name for a LOCAL parameter as a GLOBAL VARIABLE.
-      function checkName(name) {
-        if (name === "") {
-          name = prompt("Really, what is your name?");
+      function checkName(nameStr) {
+        if (nameStr === "") {
+          nameStr = prompt("Really, what is your name?");
         }
-        return name;
+        return nameStr;
       }
 
       // FUNCTION EXPRESSION
