@@ -180,7 +180,8 @@
       let name = prompt("What is your name?");
 
       // This is a FUNCTION DECLARATION
-      function checkName() {
+      // Normally, we can avoid using the same name for a LOCAL parameter as a GLOBAL VARIABLE.
+      function checkName(name) {
         if (name === "") {
           name = prompt("Really, what is your name?");
         }
@@ -194,7 +195,7 @@
       // Check IF name is a 'blank' String
       // REFACTOR the 'error check' into a 'function'
 
-      checkName();
+      checkName(name);
 
       // Use `alert` to say hello to the user, using the name they put in
       alert(`Hello ${name}!`); // "Hello, " + name
