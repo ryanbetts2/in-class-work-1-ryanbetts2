@@ -23,4 +23,7 @@ function checkName(nameStr){
 // We capture what is RETURNED by checkName and overwrite 'name' with that value;
 name = checkName(name);
 
-document.querySelector('h1').textContent = name;
+// Use innerHTML to 'inject' #greeting with a <p> containing the value of name
+document.querySelector('#greeting').innerHTML = `<p style="color: white;">${name}</p>`;
+// document.querySelector('#greeting').textContent = `<p style="color: white;">${name}</p>`;
+
