@@ -1,29 +1,26 @@
-// Create `prompt` to ask for name
-// 'name' is here as a GLOBAL VARIABLE that 'anyone' in the <script> can freely access and modify.
-let name = prompt('What is your name?');
+// Establish an emtpy Array in the global scope
+let nameArr = [];
 
-// This is a FUNCTION DECLARATION
-// Normally, we can avoid using the same name for a LOCAL parameter as a GLOBAL VARIABLE.
-function checkName(nameStr){
-    // !"" - If nameStr is 'falsey' then this will run.
-    if(!nameStr){
-    // If nameStr is false-y
-        nameStr = prompt('Really, what is your name?');
+nameArr[0] = prompt('What is your first name?');
+nameArr[1] = prompt('What is your last name?');
+
+// name is an Array of 'first name' and 'last name.'
+function checkName(name){
+    if(!name[0] || !name[1]){
+        // Developer's Note: We are requiring both pieces of information even if only 1 is blank!
+        name[0] = prompt('Really, what is your first name?');
+        name[1] = prompt('Really, what is your last name?');
 
         // RECURSION - Fxn. calls itself again
-        nameStr = checkName(nameStr);
+        name = checkName(name);
     }
 
-    return nameStr;
+    return name;
 }
 
-// FUNCTION EXPRESSION
-// let checkName = function() { // Function code }
-
-// We capture what is RETURNED by checkName and overwrite 'name' with that value;
-name = checkName(name);
+// We capture what is RETURNED by checkName and overwrite 'nameArr' with that value;
+nameArr = checkName(nameArr);
 
 // Use innerHTML to 'inject' #greeting with a <p> containing the value of name
-document.querySelector('#greeting').innerHTML = `<p style="color: white;">${name}</p>`;
-// document.querySelector('#greeting').textContent = `<p style="color: white;">${name}</p>`;
+document.querySelector('#greeting').innerHTML = `<p style="color: white;">${nameArr[0]} ${nameArr[1]}</p>`;
 
