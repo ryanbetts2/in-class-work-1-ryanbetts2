@@ -5,8 +5,9 @@ let name = prompt('What is your name?');
 // This is a FUNCTION DECLARATION
 // Normally, we can avoid using the same name for a LOCAL parameter as a GLOBAL VARIABLE.
 function checkName(nameStr){
-    if(nameStr === ''){
-    // IF the name is blank, ask again and be sure to capture/overwrite the value of nameStr
+    // !"" - If nameStr is 'falsey' then this will run.
+    if(!nameStr){
+    // If nameStr is false-y
         nameStr = prompt('Really, what is your name?');
 
         // RECURSION - Fxn. calls itself again
