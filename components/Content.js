@@ -1,4 +1,4 @@
-export default function Content(){
+export default function Content(state){
     return `<div id="bg-container">
       <header class="align-items-top container flex">
         <img
@@ -10,7 +10,7 @@ export default function Content(){
         <div class="flex flex-column">
           <div id="greeting"></div>
 
-          <h1>Manav Misra's Portfolio</h1>
+          <h1>${state.title}</h1>
           <address>
             <a href="tel:16187721796">
               <span class="fas fa-phone"></span>Call me now!
