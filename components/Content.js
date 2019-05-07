@@ -1,4 +1,5 @@
-export default `<div id="bg-container">
+export default function Content(){
+    return `<div id="bg-container">
       <header class="align-items-top container flex">
         <img
           src="https://codefinity.tech/img/logo.svg"
@@ -111,3 +112,4 @@ export default `<div id="bg-container">
         </div>
       </main>
     </div>`;
+}

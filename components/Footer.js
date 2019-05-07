@@ -1,4 +1,5 @@
-export default `<footer class="container flex">
+export default function Footer(){
+    return `<footer class="container flex">
       &copy; 2019 Manav Misra
       <ul>
         <li>
@@ -20,3 +21,4 @@ export default `<footer class="container flex">
         </li>
       </ul>
     </footer>`;
+}
