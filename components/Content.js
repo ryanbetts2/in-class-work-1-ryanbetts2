@@ -1,5 +1,4 @@
-export default function Content(state){
-    return `<div id="bg-container">
+export default (state) => `<div id="bg-container">
       <header class="align-items-top container flex">
         <img
           src="https://codefinity.tech/img/logo.svg"
@@ -21,7 +20,7 @@ export default function Content(state){
 
       <main class="container">
         <img
-          src="./img/sample.jpeg"
+          src="${state.image}"
           alt="Some sample image"
           width="200"
           class="flt-lft"
@@ -112,4 +111,3 @@ export default function Content(state){
         </div>
       </main>
     </div>`;
-}
