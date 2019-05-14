@@ -11,10 +11,13 @@ const state = {
 };
 
 // Use innerHTML property as a SETTER
-document.querySelector('#root').innerHTML =
-// In each of these, we are invoking our fxns. and the 'return' is the resulting HTML
-`
+const root = document.querySelector('#root');
+
+// render receives an argument as a named parameter: 'state'
+function render(state){
+    root.innerHTML = `
   ${Navigation(state)}
   ${Content(state)}
   ${Footer(state)}
   `;
+}
