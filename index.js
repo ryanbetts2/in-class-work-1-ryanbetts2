@@ -4,10 +4,25 @@ import Footer from './components/Footer';
 
 import img from './img/sample.jpeg';
 
-// State is an Object Literal that will hold information that functional components to properly render
-const state = {
-    'title': "Manav's Savvy Code Portfolio",
-    'image': img
+const states = {
+    'home': {
+        'title': "Manav's Savvy Code Portfolio",
+
+        // TODO: Prevent repeating use of 'links.'
+        'links': [ 'About Me', 'Contact', 'Class Showcase', 'Web Store Hack-a-thon', 'Demo Day Project' ],
+        'image': img
+    },
+    'contact': {
+        'title': 'Contact Me!',
+        'links': [ 'About Me', 'Contact', 'Class Showcase', 'Web Store Hack-a-thon', 'Demo Day Project' ],
+        'image': img
+    },
+    'about': {
+        'title': 'About Me',
+        'links': [ 'About Me', 'Contact', 'Class Showcase', 'Web Store Hack-a-thon', 'Demo Day Project' ],
+        'image': img
+    },
+
 };
 
 // Use innerHTML property as a SETTER
