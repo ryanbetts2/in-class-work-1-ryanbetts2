@@ -10,15 +10,12 @@ function buildNavHTML(stateLinks){
 
 export default (state) => `<nav>
       <ul class="flex">
-        ${buildNavHTML(state.links)}
+        ${buildNavHTML(state.links.primary)}
         <li>
           Portfolio
           <ul id="dropdown">
-            <li><a href="class.html">Class</a></li>
-            <li><a href="web-store.html">Web Store</a></li>
-            <li><a href="demo.html">Demo Day</a></li>
+            ${buildNavHTML(state.links.dropdown)}
           </ul>
         </li>
       </ul>
     </nav>`;
-
