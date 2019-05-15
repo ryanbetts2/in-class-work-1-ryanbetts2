@@ -5,24 +5,23 @@ import Footer from './components/Footer';
 import img from './img/sample.jpeg';
 
 const states = {
-    'home': {
-        'title': "Manav's Savvy Code Portfolio",
 
-        // TODO: Prevent repeating use of 'links.'
-        'links': [ 'About Me', 'Contact', 'Class Showcase', 'Web Store Hack-a-thon', 'Demo Day Project' ],
-        'image': img
-    },
-    'contact': {
-        'title': 'Contact Me!',
-        'links': [ 'About Me', 'Contact', 'Class Showcase', 'Web Store Hack-a-thon', 'Demo Day Project' ],
-        'image': img
+    // TODO: Resolve issue with repetitive 'links' in each of these 🔑s.
+    'home': {
+        'title': 'Welcome to Savvy Portfolio',
+        'image': img,
+        'links': [ 'Home', 'About', 'Contact' ]
     },
     'about': {
-        'title': 'About Me',
-        'links': [ 'About Me', 'Contact', 'Class Showcase', 'Web Store Hack-a-thon', 'Demo Day Project' ],
-        'image': img
+        'title': 'About',
+        'image': img,
+        'links': [ 'Home', 'About', 'Contact' ]
     },
-
+    'contact': {
+        'title': 'Contact',
+        'image': img,
+        'links': [ 'Home', 'About', 'Contact' ]
+    }
 };
 
 // Use innerHTML property as a SETTER
