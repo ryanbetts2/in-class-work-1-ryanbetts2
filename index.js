@@ -5,22 +5,30 @@ import Footer from './components/Footer';
 import img from './img/sample.jpeg';
 
 const states = {
-
     // TODO: Resolve issue with repetitive 'links' in each of these 🔑s.
     'home': {
         'title': 'Welcome to Savvy Portfolio',
         'image': img,
-        'links': [ 'Home', 'About', 'Contact' ]
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Class Project', 'Hack-a-Thon', 'Demo Day' ]
+        }
     },
     'about': {
         'title': 'About',
         'image': img,
-        'links': [ 'Home', 'About', 'Contact' ]
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Class Project', 'Hack-a-Thon', 'Demo Day' ]
+        }
     },
     'contact': {
         'title': 'Contact',
         'image': img,
-        'links': [ 'Home', 'About', 'Contact' ]
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Class Project', 'Hack-a-Thon', 'Demo Day' ]
+        }
     }
 };
 
