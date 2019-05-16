@@ -9,6 +9,7 @@ const root = document.querySelector('#root');
 
 // render receives an argument as a named parameter: 'state'
 function render(state){
+    // TODO: Use Shadow DOM and Virtual DOM 'diffing' to avoid re-rendering ALL of the components
     root.innerHTML = `
   ${Navigation(state)}
   ${Content(state)}

@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
   <header class="align-items-top container flex">
     <img
       src="https://codefinity.tech/img/logo.svg"
@@ -9,7 +10,7 @@ export default `
     <div class="flex flex-column">
       <div id="greeting"></div>
 
-      <h1>some title</h1>
+      <h1>Welcome to Savvy Coder's</h1>
       <address>
         <a href="tel:16187721796">
           <span class="fas fa-phone"></span>Call me now!
@@ -20,7 +21,7 @@ export default `
 
   <main class="container">
     <img
-      src="broken image"
+      src="${state.image}"
       alt="Some sample image"
       width="200"
       class="flt-lft"
@@ -111,3 +112,4 @@ export default `
     </div>
   </main>
 `;
+}

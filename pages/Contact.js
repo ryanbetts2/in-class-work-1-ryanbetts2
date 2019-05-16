@@ -1,4 +1,5 @@
-export default `
+export default function(){
+    return  `
     <h1>Contact Me</h1>
     <form
       action="https://formspree.io/manavm@visionwebsoft.com"
@@ -84,3 +85,4 @@ export default `
         <input type="reset" value="Clear Form" />
       </div>
     </form>`;
+}

@@ -6,6 +6,6 @@ export default (state) => {
 
     return `
   <div id="bg-container">
-    ${pages[state.pageContent]}
+    ${pages[state.pageContent](state)}
   </div>`;
 };
