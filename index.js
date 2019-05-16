@@ -9,24 +9,21 @@ const root = document.querySelector('#root');
 
 // render receives an argument as a named parameter: 'state'
 function render(state){
-    console.log('render receives state:', state);
-
-
     root.innerHTML = `
   ${Navigation(state)}
   ${Content(state)}
   ${Footer(state)}
   `;
+
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            render(states[`${e.target.textContent}`]);
+        });
+    });
 }
 
 render(states.Home);
 
-const links = document.querySelectorAll('nav a');
-
-links.forEach((link) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        render(states[`${e.target.textContent}`]);
-    });
-});
