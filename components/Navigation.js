@@ -8,10 +8,7 @@ function buildNavHTML(stateLinks){
     return linksHTML;
 }
 
-export default (state) => {
-    console.log('navigation got stae ike this: ', state);
-
-    return `<nav>
+export default (state) => `<nav>
       <ul class="flex">
         ${buildNavHTML(state.links.primary)}
         <li>
@@ -22,4 +19,3 @@ export default (state) => {
         </li>
       </ul>
     </nav>`;
-};
