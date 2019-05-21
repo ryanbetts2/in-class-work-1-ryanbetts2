@@ -24,14 +24,7 @@ function render(state){
   ${Footer(state)}
   `;
 
-    const links = document.querySelectorAll('nav a');
-
-    links.forEach((link) => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            render(states[`${e.target.closest('nav a').textContent}`]);
-        });
-    });
+    router.updatePageLinks();
 }
 
 // function handleRoutes(params) {
