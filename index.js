@@ -4,6 +4,9 @@ import Footer from './components/Footer';
 
 import * as states from './store';
 
+// Object Destructuring
+import { capitalize } from 'lodash';
+
 import Navigo from 'navigo';
 
 // origin is required to help our router handle localhost addresses
@@ -31,7 +34,13 @@ function render(state){
     });
 }
 
+// function handleRoutes(params) {
+//     render(states[capitalize(params.path)])
+// }
+
 router
-    .on(':path', (params) => console.log(params))
+    .on(':path', (params) => {
+        render(states[capitalize(params.path)]);
+    })
     .on('/', () => render(states.Home))
     .resolve();
