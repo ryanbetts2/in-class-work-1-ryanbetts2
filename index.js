@@ -21,7 +21,7 @@ function render(state){
     links.forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            render(states[`${e.target.textContent}`]);
+            render(states[`${e.target.closest('nav a').textContent}`]);
         });
     });
 }
