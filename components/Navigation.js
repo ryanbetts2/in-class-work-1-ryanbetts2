@@ -9,16 +9,21 @@ function buildIconHTML(link){
 }
 
 function buildNavHTML(stateLinks){
+    console.log('buildNavHTML received statelinks as:', stateLinks);
     let linksHTML = '';
 
     stateLinks.forEach((link) => {
+        console.log('stateLinks forEach is receiving a link:', link);
         linksHTML += `<li><a href="/${link.text.toLowerCase()}" data-navigo>${buildIconHTML(link)}${link.text}</a></li>`;
     });
 
     return linksHTML;
 }
 
-export default (state) => `<nav>
+export default (state) => {
+    console.log('navigation component receives state:', state);
+
+    return `<nav>
       <ul class="flex">
         ${buildNavHTML(state.links.primary)}
         <li>
@@ -29,3 +34,4 @@ export default (state) => `<nav>
         </li>
       </ul>
     </nav>`;
+};
