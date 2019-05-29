@@ -4,22 +4,16 @@ import Footer from './components/Footer';
 
 import * as states from './store';
 
-console.log('states was imported form the store folder as: ', states);
-
 // Object Destructuring
 import { capitalize } from 'lodash';
 
-console.log('capitalize from lodash looks like: ', capitalize);
-
+// capitalize 'Navigo' to make it clear that this is a CONSTRUCTOR FXN.
 import Navigo from 'navigo';
 
 // origin is required to help our router handle localhost addresses
 const router = new Navigo(window.location.origin);
 
-// Use innerHTML property as a SETTER
 const root = document.querySelector('#root');
-
-console.log('root looks like this: ', root);
 
 // render receives an argument as a named parameter: 'state'
 function render(state){
