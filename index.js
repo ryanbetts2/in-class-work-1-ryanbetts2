@@ -10,6 +10,9 @@ import { capitalize } from 'lodash';
 // capitalize 'Navigo' to make it clear that this is a CONSTRUCTOR FXN.
 import Navigo from 'navigo';
 
+// 'axios' is NOT  fxn. constructor - no need to instantiate with 'new'
+import axios from 'axios';
+
 // origin is required to help our router handle localhost addresses
 const router = new Navigo(window.location.origin);
 
@@ -41,3 +44,14 @@ router
     })
     .on('/', () => render(states.Home))
     .resolve();
+
+axios
+    .get('https://jsonplaceholder.typicode.com/posts')
+    // After CALL STACK is all empty, JS can execute the 'then' to 'unwrap' the Promise
+    .then((response) => {
+        // 'response.data' is an Array of 'Post' Objects
+        // We need to get this into states.Blog.posts
+        response.data.forEach((post) => states.Blog.posts.push(post));
+        render(states.Home);
+    });
+
