@@ -30,9 +30,20 @@ function render(state){
     router.updatePageLinks();
 }
 
-// function handleRoutes(params) {
-//     render(states[capitalize(params.path)])
-// }
+axios
+    .get('https://jsonplaceholder.typicode.com/posts')
+    // After CALL STACK is all empty, JS can execute the 'then' to 'unwrap' the Promise
+    .then((response) => {
+        // 'response.data' is an Array of 'Post' Objects
+        // We need to get this into states.Blog.posts
+        response.data.forEach((post) => states.Blog.posts.push(post));
+
+        // If there was a requested route (e.g. /blog, /contact, /about), then the 'params' property will exist.
+        // We will then check if the path inside of that was 'blog.'
+        if(router.lastRouteResolved().params && router.lastRouteResolved().params.path === 'blog'){
+            render(states.Blog);
+        }
+    });
 
 // Check the URL bar
 // Grab anything that is beyond window.location.origin (e.g. /about)
@@ -44,14 +55,3 @@ router
     })
     .on('/', () => render(states.Home))
     .resolve();
-
-axios
-    .get('https://jsonplaceholder.typicode.com/posts')
-    // After CALL STACK is all empty, JS can execute the 'then' to 'unwrap' the Promise
-    .then((response) => {
-        // 'response.data' is an Array of 'Post' Objects
-        // We need to get this into states.Blog.posts
-        response.data.forEach((post) => states.Blog.posts.push(post));
-        render(states.Home);
-    });
-
