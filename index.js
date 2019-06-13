@@ -40,7 +40,7 @@ axios
 
         // If there was a requested route (e.g. /blog, /contact, /about), then the 'params' property will exist.
         // We will then check if the path inside of that was 'blog.'
-        if(router.lastRouteResolved().params && router.lastRouteResolved().params.path === 'blog'){
+        if(router.lastRouteResolved().params && router.lastRouteResolved().params.path === 'Blog'){
             render(states.Blog);
         }
     });
