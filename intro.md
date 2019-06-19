@@ -1,11 +1,14 @@
-# Manav Misra's Portfolio
+# Manav Misra
 
-Welcome to my portfolio. Have a look around.
+I am current teaching here at SavvyCoders. This is my *2nd* solo cohort.
 
-[GitHub](http://www.github.com)
+I have 3 🐱s. There names are:
 
-## Languages
+- Dara
+- Louie
+- Simba
 
-- JavaScript
-- NodeJS
-- Golang
+---
+
+[![Alien head graphic ](https://avatars0.githubusercontent.com/u/3387791?s=460&v=4)w](https://github.com/manavm1990)
+
