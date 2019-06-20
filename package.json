@@ -1,0 +1,24 @@
+{
+  "name": "ManavMisra",
+  "version": "1.0.0",
+  "description": "I am current teaching here at SavvyCoders. This is my *2nd* solo cohort.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manavm1990/savvy-coders-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manavm1990/savvy-coders-portfolio/issues"
+  },
+  "homepage": "https://github.com/manavm1990/savvy-coders-portfolio#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "parcel-bundler": "^1.12.3"
+  }
+}
