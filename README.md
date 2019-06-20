@@ -5,6 +5,7 @@ I am current teaching here at SavvyCoders. This is my *2nd* solo cohort.
 I have 3 🐱s. There names are:
 
 - Dara
+  - Diabetic
 - Louie
 - Simba
 
