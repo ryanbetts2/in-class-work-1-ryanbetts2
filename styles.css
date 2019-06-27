@@ -7,8 +7,8 @@ body {
   font-size: 20px;
 }
 
-main {
-
+section {
+  font-size: 10px;
 }
 
 h1 {
@@ -21,5 +21,16 @@ h2 {
 }
 
 p {
-  font-size: 0.75em;
+  font-size: 0.75rem;
+}
+
+figure {
+  margin: 25px auto;
+  text-align: center;
+  width: 100vw;
+}
+
+/* Responsive image is limited to the width of its parent. */
+img {
+  max-width: 100%;
 }
