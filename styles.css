@@ -1,0 +1,25 @@
+body {
+  background: rgba(26, 91, 199, 0.91);
+  color: red;
+  font-family: "Roboto", sans-serif;
+
+  /* Set BASE FONT SIZE. If we don't set this, browser uses 16px. */
+  font-size: 20px;
+}
+
+main {
+
+}
+
+h1 {
+  color: green;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 0.75em;
+}
