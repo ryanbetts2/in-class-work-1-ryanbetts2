@@ -7,10 +7,6 @@ body {
   font-size: 20px;
 }
 
-section {
-  font-size: 10px;
-}
-
 h1 {
   color: green;
   font-size: 2em;
@@ -18,10 +14,6 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-}
-
-p {
-  font-size: 0.75rem;
 }
 
 figure {
@@ -34,3 +26,14 @@ figure {
 img {
   max-width: 100%;
 }
+
+section {
+  font-size: 10px;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+/* Navigation */
+
