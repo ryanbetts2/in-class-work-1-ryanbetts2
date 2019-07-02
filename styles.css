@@ -77,7 +77,8 @@ nav > ul {
 }
 
 /* Hero */
-header, header div {
+header,
+header div {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -97,4 +98,21 @@ header div {
 
   /* % checks the parent's width and scales accordingly. */
   width: 100%;
+}
+
+/* Main */
+main {
+  display: flex;
+}
+
+main > section {
+  background: rgba(255, 255, 255, 0.5);
+  color: #333;
+  margin: 10px;
+  padding: 15px;
+}
+
+main section h2 {
+  font-weight: bold;
+  text-transform: uppercase;
 }
