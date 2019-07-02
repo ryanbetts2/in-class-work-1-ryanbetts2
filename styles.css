@@ -77,15 +77,24 @@ nav > ul {
 }
 
 /* Hero */
-header {
+header, header div {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header {
   /* background-image: url(https://picsum.photos/960/550);
   background-repeat: no-repeat;
   background-position: top center; */
   background: url(https://picsum.photos/960/550) no-repeat top center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
   height: 80vh;
-  justify-content: center;
+}
+
+header div {
+  background: rgba(255, 255, 255, 0.5);
+
+  /* % checks the parent's width and scales accordingly. */
+  width: 100%;
 }
