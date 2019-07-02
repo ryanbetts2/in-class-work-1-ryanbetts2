@@ -7,6 +7,10 @@ body {
   font-size: 20px;
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style-type: none;
 }
@@ -40,4 +44,34 @@ p {
 }
 
 /* Navigation */
+nav {
+  background: white;
+  padding: 10px 0;
+}
 
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.dropdown ul {
+  background: white;
+
+  /* top-left, top-right, bottom-right, bottom-left */
+  border-radius: 0 3px 3px 3px;
+
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+  display: none;
+  padding: 8px;
+
+  /* Moves this out of the 'document flow' such that when it appears, it doesn't 'push' anything out of the way. */
+  position: absolute;
+}
+
+/* Generally, 'focus' goes with 'hover' state to help with keyboard navigation and accessiblity. */
+.dropdown:focus ul,
+.dropdown:hover ul {
+  display: flex;
+  flex-direction: column;
+}
