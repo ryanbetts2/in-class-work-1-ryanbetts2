@@ -40,7 +40,7 @@ section {
 }
 
 p {
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 
 /* Navigation */
@@ -145,4 +145,36 @@ footer {
 
 footer li {
   display: inline-block;
+}
+
+/* Form */
+form {
+  border: solid 3px pink;
+  margin: 15px auto;
+  padding: 10px;
+  width: 60vw;
+}
+
+form span {
+  margin: 0 5px;
+}
+
+/* Attribute Selector */
+input[type="checkbox"],
+input[type="radio"] {
+  transform: translateY(-3px);
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+.input-group--flex {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
 }
