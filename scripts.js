@@ -1,9 +1,9 @@
-// Create a greeter fxn. that will use the person's name and display, "Hello, John!" in <h1>.
+let fname = prompt('What is ur first name?');
+let lname = prompt('What is ur last name?');
 
-const name = prompt('What is ur name?');
+while(!fname || !lname){
+    fname = prompt('What is ur first name?');
+    lname = prompt('What is ur last name?');
+}
 
-// const h1 = document.querySelector('h1');
-
-// h1.textContent = `Hello, ${name}`;
-
-document.querySelector('h1').textContent = `Hello, ${name}`;
+document.querySelector('#greeting').innerHTML = `<p>Hello, ${fname} ${lname}</p>`;
