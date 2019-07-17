@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
     <footer>
       <address>
         <ul>
@@ -23,3 +24,4 @@ export default `
       </address>
     </footer>
 `;
+}
