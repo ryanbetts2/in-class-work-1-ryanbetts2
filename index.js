@@ -33,9 +33,6 @@ render(states.home);
 const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
 
 // i will serve as a placeholder to represent the index of the item we need to access from navItems.
-// console.log(navItems[0]);
-// console.log(navItems[1]);
-// console.log(navItems[2]);
 let i = 0;
 
 // TODO: Refactor this loop structure.
@@ -58,48 +55,3 @@ while(i < navItems.length){
     );
     i += 1;
 }
-
-// navItems[0].addEventListener(
-//     'click',
-
-//     // Add this callback fxn. to each of the navItems.
-//     function clickHandler(event){
-//         event.preventDefault();
-
-//         const clickedItem = event.target.textContent;
-//         const clicked = clickedItem.toLowerCase();
-
-//         render(states[clicked]);
-//         // Developer's Note: render(states[event.target.textContent.toLowerCase()]);
-//     }
-// );
-
-// navItems[1].addEventListener(
-//     'click',
-
-//     // Add this callback fxn. to each of the navItems.
-//     function clickHandler(event){
-//         event.preventDefault();
-
-//         const clickedItem = event.target.textContent;
-//         const clicked = clickedItem.toLowerCase();
-
-//         render(states[clicked]);
-//         // Developer's Note: render(states[event.target.textContent.toLowerCase()]);
-//     }
-// );
-
-// navItems[2].addEventListener(
-//     'click',
-
-//     // Add this callback fxn. to each of the navItems.
-//     function clickHandler(event){
-//         event.preventDefault();
-
-//         const clickedItem = event.target.textContent;
-//         const clicked = clickedItem.toLowerCase();
-
-//         render(states[clicked]);
-//         // Developer's Note: render(states[event.target.textContent.toLowerCase()]);
-//     }
-// );
