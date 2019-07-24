@@ -35,26 +35,10 @@ render(states.home);
 // The elements will not exist until page is rendered!
 const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
 
-// i will serve as a placeholder to represent the index of the item we need to access from navItems.
-let i = 0;
+navItems.forEach(function eventListenerAdder(navItem){
+    navItem.addEventListener('click', function clickHandler(event){
+        event.preventDefault();
 
-// TODO: Refactor this loop structure.
-// i will run from 0 until 3.
-while(i < navItems.length){
-    // Use the value of i as an index to access the navItem.
-    navItems[i].addEventListener(
-        'click',
-
-        // Add this callback fxn. to each of the navItems.
-        function clickHandler(event){
-            event.preventDefault();
-
-            // const clickedItem = event.target.textContent;
-            // const clicked = clickedItem.toLowerCase();
-
-            // render(states[clicked]);
-            render(states[event.target.textContent.toLowerCase()]);
-        }
-    );
-    i += 1;
-}
+        render(states[event.target.textContent.toLowerCase()]);
+    });
+});
