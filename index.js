@@ -27,18 +27,22 @@ function render(state){
   ${Main(state)}
   ${Footer(state)}
 `;
+
+    /**
+     * Developer's Note: The 'Navigation' functional component renders 'new' links each and every time. Therefore, on each re-render, we must grab those links and re-attach the event listeners to respond to 'clicks.'
+     */
+
+    // The elements will not exist until page is rendered!
+    const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
+
+    navItems.forEach(function eventListenerAdder(navItem){
+        navItem.addEventListener('click', function clickHandler(event){
+            event.preventDefault();
+
+            render(states[event.target.textContent.toLowerCase()]);
+        });
+    });
 }
 
 // To render a page, we pass in a piece of state.
 render(states.home);
-
-// The elements will not exist until page is rendered!
-const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
-
-navItems.forEach(function eventListenerAdder(navItem){
-    navItem.addEventListener('click', function clickHandler(event){
-        event.preventDefault();
-
-        render(states[event.target.textContent.toLowerCase()]);
-    });
-});
