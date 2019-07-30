@@ -18,15 +18,13 @@ const states = {
 };
 
 function render(state){
-    console.log('state came in as:', state);
-
     // We use function invocation that actually runs the fxn. and then `returns` the markup so that it is properly rendered in the browser.
     document.querySelector('#root').innerHTML = `
-  ${Navigation(state)}
-  ${Header(state)}
-  ${Main(state)}
-  ${Footer(state)}
-`;
+        ${Navigation(state)}
+        ${Header(state)}
+        ${Main(state)}
+        ${Footer(state)}
+    `;
 
     /**
      * Developer's Note: The 'Navigation' functional component renders 'new' links each and every time. Therefore, on each re-render, we must grab those links and re-attach the event listeners to respond to 'clicks.'
@@ -39,6 +37,7 @@ function render(state){
         navItem.addEventListener('click', function clickHandler(event){
             event.preventDefault();
 
+            // Recursive fxn. call
             render(states[event.target.textContent.toLowerCase()]);
         });
     });
