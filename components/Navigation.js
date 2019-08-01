@@ -1,16 +1,14 @@
 function linkBuilder(links){
-    // Receive an Array of 'strings' that are the names of the links
-    // Return all of the necessary <li> items.
-    let listHTML = '';
+    // const linkHTML = links.map(function linkLister(link){
+    //     return `<li>${link}</li>`;
+    // });
 
-    links.forEach(function linkHandler(link){
-        // listHTML = listHTML +
-        listHTML += `
-        <li>${link}</li>
-      `;
-    });
-
-    return listHTML;
+    // return linkHTML.join(' ');
+    return links
+        .map(function linkLister(link){
+            return `<li>${link}</li>`;
+        })
+        .join(' ');
 }
 
 export default function(state){
