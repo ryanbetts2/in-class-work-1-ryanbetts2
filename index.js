@@ -5,7 +5,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 // Describes the current STATE of our SPA. We say that we pass 'pieces of state.'
-const states = {
+const store = {
     'home': {
         'title': 'This is the home page!'
     },
@@ -38,10 +38,10 @@ function render(state){
             event.preventDefault();
 
             // Recursive fxn. call
-            render(states[event.target.textContent.toLowerCase()]);
+            render(store[event.target.textContent.toLowerCase()]);
         });
     });
 }
 
 // To render a page, we pass in a piece of state.
-render(states.home);
+render(store.home);
