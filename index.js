@@ -6,14 +6,145 @@ import Footer from './components/Footer';
 
 // Describes the current STATE of our SPA. We say that we pass 'pieces of state.'
 const store = {
+    'links': {
+        'primary': [ 'Home', 'About', 'Contact' ],
+        'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+    },
     'home': {
-        'title': 'This is the home page!'
+        'title': 'This is the home page!',
+        'page': `
+        <!-- Sections are like subtopics directly related to the general topic of the page. -->
+      <section>
+        <h2>This Is My Top Section</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis nulla
+          temporibus enim, qui quo sed quisquam itaque dolorum laborum nam
+          necessitatibus corrupti ratione porro vitae perspiciatis! Pariatur
+          reprehenderit aut sed!
+        </p>
+
+        <a href="#" class="cta-btn">Read More!</a>
+      </section>
+
+      <section>
+        <h2>This Is My Top Section</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis nulla
+          temporibus enim, qui quo sed quisquam itaque dolorum laborum nam
+          necessitatibus corrupti ratione porro vitae perspiciatis! Pariatur
+          reprehenderit aut sed!
+        </p>
+
+        <a href="#" class="cta-btn">Read More!</a>
+      </section>
+
+      <section>
+        <h2>This Is My Top Section</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis nulla
+          temporibus enim, qui quo sed quisquam itaque dolorum laborum nam
+          necessitatibus corrupti ratione porro vitae perspiciatis! Pariatur
+          reprehenderit aut sed!
+        </p>
+
+        <a href="#" class="cta-btn">Read More!</a>
+      </section>`
     },
     'about': {
-        'title': 'About Page'
+        'title': 'About Page',
+        'page': `
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tenetur ullam libero dolorum in nobis quo similique, culpa saepe quod, error aspernatur repellat consequuntur sequi iure ratione? Aut, consectetur aliquid?</p>
+        `
     },
     'contact': {
-        'title': 'Contact'
+        'title': 'Contact',
+        'page': `
+            <form action="form-responses/new" method="POST" netlify>
+        <input
+          type="text"
+          name="firstname"
+          placeholder="First Name"
+          autofocus
+          required
+        />
+        <input type="text" name="lastname" placeholder="Last Name" />
+        <input
+          type="email"
+          name="userEmail"
+          placeholder="your.email@example.com"
+        />
+
+        <p>What's this message about?</p>
+
+        <div class="input-group">
+          <span>
+            <!-- Generally, the 'for' attribute on <label> should match the 'id' of an <input>.
+          Radio button 'groups' need to have the same 'name' attribute value so that the server can properly interpret the results. -->
+            <input
+              type="radio"
+              name="subject"
+              value="professional"
+              id="pro"
+              checked
+            />
+            <label for="pro">I'd like to hire you!</label>
+          </span>
+
+          <span>
+            <input type="radio" name="subject" value="personal" id="personal" />
+            <label for="personal">Personal message</label>
+          </span>
+
+          <span>
+            <input type="radio" name="subject" value="other" />
+            <label>Don't know/something else</label>
+          </span>
+        </div>
+
+        <div class="input-group">
+          <input
+            type="checkbox"
+            name="optin"
+            value="trusting"
+            checked
+          />Subscribe me to your newsletter!
+          <input
+            type="checkbox"
+            name="optout"
+            value="skeptical"
+            disabled
+          />Cheeky checkbox...
+        </div>
+
+        <div class="input-group input-group--flex">
+          <label for="marketing">How did you hear about me?</label>
+          <select name="marketing" id="marketing">
+            <optgroup label="Online">
+              <option value="social"
+                >Social Media (FB, Twitter, LinkedIn)</option
+              >
+              <option value="github">Online Portfolio (GitHub)</option>
+              <option value="search">Search Engine</option>
+              <option value="email">Email</option>
+            </optgroup>
+            <optgroup label="In-Person">
+              <option value="networking">We met at a networking event</option>
+              <option value="referral">Personal referral</option>
+              <option value="random">We met somewhere else</option>
+            </optgroup>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="input-group--flex">
+          <textarea name="user_message" rows="8" cols="40"></textarea>
+          <div>
+            <input type="submit" />
+            <input type="reset" value="Reset" />
+          </div>
+        </div>
+      </form>
+        `
     }
 };
 
