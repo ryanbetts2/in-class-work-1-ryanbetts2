@@ -6,11 +6,11 @@ import Footer from './components/Footer';
 
 // Describes the current STATE of our SPA. We say that we pass 'pieces of state.'
 const store = {
-    'links': {
-        'primary': [ 'Home', 'About', 'Contact' ],
-        'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
-    },
     'home': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'title': 'This is the home page!',
         'page': `
         <!-- Sections are like subtopics directly related to the general topic of the page. -->
@@ -51,12 +51,20 @@ const store = {
       </section>`
     },
     'about': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'title': 'About Page',
         'page': `
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tenetur ullam libero dolorum in nobis quo similique, culpa saepe quod, error aspernatur repellat consequuntur sequi iure ratione? Aut, consectetur aliquid?</p>
         `
     },
     'contact': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'title': 'Contact',
         'page': `
             <form action="form-responses/new" method="POST" netlify>
