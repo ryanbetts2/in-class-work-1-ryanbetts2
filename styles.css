@@ -15,6 +15,11 @@ li {
   list-style-type: none;
 }
 
+li:hover,
+li:focus {
+  cursor: pointer;
+}
+
 h1 {
   color: green;
   font-size: 2em;
