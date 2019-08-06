@@ -5,10 +5,11 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 // Describes the current STATE of our SPA. We say that we pass 'pieces of state.'
+// TODO: Refactor 'store' into its own folder and `import`
 const store = {
     'home': {
         'links': {
-            'primary': [ 'Home', 'About', 'Contact' ],
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'This is the home page!',
@@ -52,7 +53,7 @@ const store = {
     },
     'about': {
         'links': {
-            'primary': [ 'Home', 'About', 'Contact' ],
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'About Page',
@@ -62,7 +63,7 @@ const store = {
     },
     'contact': {
         'links': {
-            'primary': [ 'Home', 'About', 'Contact' ],
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'Contact',
@@ -153,7 +154,19 @@ const store = {
         </div>
       </form>
         `
-    }
+    },
+    'blog': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact', 'Blog' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
+        'title': 'Blog Page',
+
+        // TODO: 'page' will be updated after we fetch the data for the blog post.
+        'page': `
+        <p>Loading blog posts!</p>
+        `
+    },
 };
 
 function render(state){
@@ -176,7 +189,7 @@ function render(state){
         navItem.addEventListener('click', function clickHandler(event){
             event.preventDefault();
 
-            // Recursive fxn. call
+            // Recursive fxn. call handles our client-side routing on clicks
             render(store[event.target.textContent.toLowerCase()]);
         });
     });
