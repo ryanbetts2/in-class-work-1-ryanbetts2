@@ -4,6 +4,15 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
+// Import the Navigo constructor fxn. from the node module called 'navigo.'
+import Navigo from 'navigo';
+
+/**
+ * location.origin provides the 'base' URL for Navigo to get started.
+ * new creates a new instance of Navigo from it's constructor fxn.
+ */
+const router = new Navigo(location.origin);
+
 // Describes the current STATE of our SPA. We say that we pass 'pieces of state.'
 // TODO: Refactor 'store' into its own folder and `import`
 const store = {
@@ -166,7 +175,7 @@ const store = {
         'page': `
         <p>Loading blog posts!</p>
         `
-    },
+    }
 };
 
 function render(state){
@@ -197,3 +206,28 @@ function render(state){
 
 // To render a page, we pass in a piece of state.
 render(store.home);
+
+// router.on('/', () => console.log('hello home page!')).resolve();
+
+/**
+ * .on is a Navigo method that behaves as any event listener might.
+ * It 'listens' to location.pathname and responds accordingly
+ */
+// TODO: Investigate 'resolve()'
+// router
+//     .on('/', function routerFxn(){
+//         console.log('hello home page!');
+//     })
+//     .resolve();
+
+/**
+ * https://github.com/krasimir/navigo#parameterized-urls
+ * Whatever comes in as 'location.pathname',
+ * 'save' that in the 'params' object under the 🔑 'page.'
+ */
+router
+    .on(':view', function renderFromParams(params){
+        render(store[params.view]);
+    }) // If there is nothing as :page...
+    .on('/', function renderHome(){})
+    .resolve();
