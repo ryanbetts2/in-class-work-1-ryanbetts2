@@ -197,11 +197,14 @@ render(store.home);
 /**
  * .on is a Navigo method that behaves as any event listener might.
  * It 'listens' to location.pathname and responds accordingly
+ *
  * https://github.com/krasimir/navigo#parameterized-urls
+ *
  * Whatever comes in as 'location.pathname',
  * 'save' that in the 'params' object under the 🔑 'page.'
+ *
+ * resolve() is a 'navigo' method that triggers the 'routing' to happen using `on()`'s cb fxn. (https://www.npmjs.com/package/navigo#resolving-the-routes)
  */
-// TODO: Investigate 'resolve()'
 router
     .on(':view', function renderFromParams(params){
         render(store[params.view]);
