@@ -187,30 +187,12 @@ function render(state){
         ${Footer(state)}
     `;
 
-    /**
-     * Developer's Note: The 'Navigation' functional component renders 'new' links each and every time. Therefore, on each re-render, we must grab those links and re-attach the event listeners to respond to 'clicks.'
-     */
-
-    // The elements will not exist until page is rendered!
-    const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
-
-    navItems.forEach(function eventListenerAdder(navItem){
-        navItem.addEventListener('click', function clickHandler(event){
-            event.preventDefault();
-
-            // Recursive fxn. call handles our client-side routing on clicks
-            render(store[event.target.textContent.toLowerCase()]);
-        });
-    });
+    // updatePageLinks() works in conjunction with 'data-navigo' and the <a href>s found in the Navigation functional component.
+    router.updatePageLinks(); // Replaces our custom click event listeners with the recursive render.
 }
 
 // To render a page, we pass in a piece of state.
 render(store.home);
-
-// router.on('/', () => console.log('hello home page!')).resolve();
-
-/**
- *  */
 
 /**
  * .on is a Navigo method that behaves as any event listener might.
@@ -223,6 +205,5 @@ render(store.home);
 router
     .on(':view', function renderFromParams(params){
         render(store[params.view]);
-    }) // If there is nothing as :page...
-    .on('/', function renderHome(){})
+    })
     .resolve();
