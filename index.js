@@ -210,21 +210,16 @@ render(store.home);
 // router.on('/', () => console.log('hello home page!')).resolve();
 
 /**
- * .on is a Navigo method that behaves as any event listener might.
- * It 'listens' to location.pathname and responds accordingly
- */
-// TODO: Investigate 'resolve()'
-// router
-//     .on('/', function routerFxn(){
-//         console.log('hello home page!');
-//     })
-//     .resolve();
+ *  */
 
 /**
+ * .on is a Navigo method that behaves as any event listener might.
+ * It 'listens' to location.pathname and responds accordingly
  * https://github.com/krasimir/navigo#parameterized-urls
  * Whatever comes in as 'location.pathname',
  * 'save' that in the 'params' object under the 🔑 'page.'
  */
+// TODO: Investigate 'resolve()'
 router
     .on(':view', function renderFromParams(params){
         render(store[params.view]);
