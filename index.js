@@ -170,8 +170,6 @@ const store = {
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'Blog Page',
-
-        // TODO: 'page' will be updated after we fetch the data for the blog post.
         'page': `
         <p>Loading blog posts!</p>
         `
@@ -210,3 +208,17 @@ router
         render(store[params.view]);
     })
     .resolve();
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => response.json())
+    .then((blogPosts) => {
+        // blogPosts is an `Array` of Object Literals
+        const blogHTML = blogPosts.map((blogPost) => `
+          <section>
+          <h2>${blogPost.title}</h2>
+          <p>${blogPost.body}</p>
+          </section>
+        `).join(' ');
+
+        store.blog.page = blogHTML;
+    });
