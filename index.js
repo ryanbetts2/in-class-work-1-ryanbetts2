@@ -206,7 +206,7 @@ render(store.home);
  * resolve() is a 'navigo' method that triggers the 'routing' to happen using `on()`'s cb fxn. (https://www.npmjs.com/package/navigo#resolving-the-routes)
  */
 router
-    .on(':view', function renderFromParams(params){
+    .on(':view', (params) => {
         render(store[params.view]);
     })
     .resolve();

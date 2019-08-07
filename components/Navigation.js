@@ -15,8 +15,7 @@ function linkBuilder(links){
         .join(' ');
 }
 
-export default function(state){
-    return `
+export default (state) => `
   <nav>
       <ul>
           ${linkBuilder(state.links.primary)}
@@ -29,4 +28,4 @@ export default function(state){
       </ul>
     </nav>
 `;
-}
+
