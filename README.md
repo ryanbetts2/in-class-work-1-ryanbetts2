@@ -38,6 +38,9 @@ w/ sub-lists
 
 ---
 
-[I'm a link to a web page!](http://www.google.com)
+[![alt text](https://i.imgur.com/81qyN1y.jpg)
+](http://www.google.com)
 
-![alt text](https://i.imgur.com/81qyN1y.jpg)
+[![alt text](./img/dad-kids.jpeg)
+](http://www.google.com)
+
