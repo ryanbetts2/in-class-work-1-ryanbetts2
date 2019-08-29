@@ -8,5 +8,5 @@
 ## Why I'm in this class
 - I'm in this class because it's required for my degree. I have one more semester then I should be done. I look forward to leaving the golf course business and moving over to IT.
 
+[![Picture](https://i.imgur.com/yB0O2ea.jpg)](https://imgur.com/gallery/cdB4Kaa)
 
-![alt text](https://imgur.com/cdB4Kaa)
