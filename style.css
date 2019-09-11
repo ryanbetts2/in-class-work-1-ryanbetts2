@@ -1,3 +1,24 @@
-body {
+/* body {
   font-family: "Chilanka", cursive;
+} */
+html {
+  --primary: #6200ee;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --secondary-variant: #018786;
+  --error: #b00020;
+}
+header,
+section:nth-of-type(odd),
+footer {
+  background: var(--primary);
+}
+
+nav,
+section:nth-of-type(even) {
+  background: #018786;
+}
+
+section:nth-of-type(odd) {
+  background: var(--primary);
 }
