@@ -31,6 +31,11 @@ header {
   align-items: center;
 }
 
+header img {
+  border-radius: 13px 10px;
+
+}
+
 h1 {
   text-align: center;
 }
