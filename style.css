@@ -74,6 +74,11 @@ h3 {
   font-size: 1.953em;
 }
 
+.hero {
+  align-items: center;
+  height: 25vh;
+}
+
 .is-hidden {
   font-size: 0;
   height: 0;
@@ -91,5 +96,5 @@ p {
 
 nav .fas {
   position: absolute;
-  transform: translateX(calc(50ww var(--base-spacing) * 9));
+  transform: translateX(calc(50vw var(--base-spacing) * 9));
 }
