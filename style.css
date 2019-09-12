@@ -37,6 +37,7 @@ header {
 header img {
   /* border-radius: calc(var(--base-spacing) * 200); */
   border-radius: 50%;
+  box-shadow: 12px 14px 9px;
 }
 
 h1 {
