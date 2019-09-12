@@ -9,8 +9,7 @@ html {
   --error: #b00020;
 }
 header,
-section:nth-of-type(odd),
-footer {
+section:nth-of-type(odd) {
   background: var(--primary);
 }
 
@@ -21,4 +20,17 @@ section:nth-of-type(even) {
 
 section:nth-of-type(odd) {
   background: var(--primary);
+}
+footer {
+  background: #018786;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
 }
