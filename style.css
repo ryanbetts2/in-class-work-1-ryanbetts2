@@ -7,6 +7,9 @@ html {
   --secondary: #03dac6;
   --secondary-variant: #018786;
   --error: #b00020;
+  --base-spacing: 8px;
+
+  font-size: 14px;
 }
 header,
 section:nth-of-type(odd) {
@@ -32,10 +35,22 @@ header {
 }
 
 header img {
-  border-radius: 13px 10px;
-
+  /* border-radius: calc(var(--base-spacing) * 200); */
+  border-radius: 50%;
 }
 
 h1 {
+  font-size: 3.052em;
   text-align: center;
+}
+h2 {
+  font-size: 2.441em;
+}
+h3 {
+  font-size: 1.953em;
+}
+
+nav,
+p {
+  font-size: 1.563em;
 }
