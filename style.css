@@ -61,12 +61,12 @@ li {
 }
 
 nav {
-  min-height: calc(var(--base-spacing) * 12);
+  min-height: calc(var(--base-spacing) * 16);
   text-align: center;
 }
 
 nav li {
-  padding: calc(var(--base-spacing) * 1.5) 0;
+  padding: calc(var(--base-spacing) * 2.5) 0;
 }
 
 nav a {
@@ -79,7 +79,7 @@ nav a {
 
 nav .fas {
   position: absolute;
-  transform: translateX(calc(50vw - calc(var(--base-spacing) * 9)));
+  transform: translateX(calc(50vw - calc(var(--base-spacing) * 13)));
 }
 
 h1 {
@@ -102,6 +102,15 @@ h3 {
   background-position: top center;
   height: 25vh;
   justify-content: center;
+}
+
+.hero a {
+  background: var(--secondary);
+  border-radius: var(--base-spacing);
+  color: whitesmoke;
+  padding: var(--base-spacing);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .is-hidden {
