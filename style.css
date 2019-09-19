@@ -159,11 +159,19 @@ footer p {
   background-image: url(https://picsum.photos/1800/1500);
   min-height: 50vh;
 }
+section .btn {
+  margin-top: auto;
+  max-width: calc(var(--base-spacing) * 15);
+  text-align: center;
+}
 
 .flex--desktop {
   display: flex;
 }
 
+.flex-column--desktop {
+  flex-direction: column;
+}
 .justify-space-around--desktop {
   justify-content: space-around;
 }
