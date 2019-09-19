@@ -11,6 +11,11 @@ html {
 
   font-size: 14px;
 }
+
+section {
+  padding: var(--base-spacing);
+}
+
 header,
 section:nth-of-type(odd) {
   background: var(--primary);
@@ -104,13 +109,19 @@ h3 {
   justify-content: center;
 }
 
-.hero a {
-  background: var(--secondary);
+.btn {
+  background: grey;
   border-radius: var(--base-spacing);
   color: whitesmoke;
   padding: var(--base-spacing);
   text-decoration: none;
   text-transform: uppercase;
+}
+
+section .btn {
+  background: grey;
+  display: inline-block;
+  margin: var(--base-spacing);
 }
 
 .is-hidden {
