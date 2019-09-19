@@ -65,7 +65,7 @@ li {
 }
 
 nav {
-  min-height: calc(var(--base-spacing) * 17);
+  min-height: calc(var(--base-spacing) * 10);
   text-align: center;
 }
 
@@ -153,6 +153,11 @@ footer p {
   header {
     flex-direction: row;
   }
+}
+
+.hero {
+  background-image: url(https://picsum.photos/1800/1500);
+  min-height: 50vh;
 }
 
 .flex--desktop {
