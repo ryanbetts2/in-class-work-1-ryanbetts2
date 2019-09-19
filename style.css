@@ -65,7 +65,7 @@ li {
 }
 
 nav {
-  min-height: calc(var(--base-spacing) * 16);
+  min-height: calc(var(--base-spacing) * 17);
   text-align: center;
 }
 
@@ -83,7 +83,7 @@ nav a {
 
 nav .fas {
   position: absolute;
-  transform: translateX(calc(50vw - calc(var(--base-spacing) * 13)));
+  transform: translateX(calc(50vw - calc(var(--base-spacing) * 250)));
 }
 
 h1 {
@@ -123,7 +123,7 @@ section .btn {
   margin: var(--base-spacing);
 }
 
-.is-hidden {
+.is-hidden--mobile {
   font-size: 0;
   height: 0;
 }
@@ -153,4 +153,21 @@ footer p {
   header {
     flex-direction: row;
   }
+}
+
+.flex--desktop {
+  display: flex;
+}
+
+.justify-space-around--desktop {
+  justify-content: space-around;
+}
+.is-hidden--desktop {
+  font-size: 0;
+  height: 0;
+}
+
+.is-shown--desktop {
+  font-size: initial;
+  height: initial;
 }
