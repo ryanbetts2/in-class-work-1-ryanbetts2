@@ -158,24 +158,21 @@ footer p {
   header {
     flex-direction: row;
   }
-}
-
-.flex--desktop {
-  display: flex;
-}
-
-.flex-column--desktop {
-  flex-direction: column;
-}
-.justify-space-around--desktop {
-  justify-content: space-around;
-}
-.is-hidden--desktop {
-  font-size: 0;
-  height: 0;
-}
-
-.is-shown--desktop {
-  font-size: initial;
-  height: initial;
+  .is-hidden--desktop {
+    font-size: 0;
+    height: 0;
+  }
+  .flex--desktop {
+    display: flex;
+  }
+  .flex-column--desktop {
+    flex-direction: column;
+  }
+  .justify-space-around--desktop {
+    justify-content: space-around;
+  }
+  .is-shown--desktop {
+    font-size: initial;
+    height: initial;
+  }
 }
