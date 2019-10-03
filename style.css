@@ -40,6 +40,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: calc(var(--base-spacing) * 2);
 }
 
 header img {
@@ -73,7 +74,9 @@ nav li {
   padding: calc(var(--base-spacing) * 2.5) 0;
 }
 
-nav a {
+nav,
+a,
+p {
   text-decoration: none;
   color: white;
 }
@@ -84,7 +87,7 @@ nav a {
 
 nav .fas {
   position: absolute;
-  transform: translateX(calc(50vw - calc(var(--base-spacing) * 250)));
+  transform: translateX(calc(50vw - calc(var(--base-spacing) * 9)));
 }
 
 h1 {
@@ -100,15 +103,13 @@ h3 {
 
 .hero {
   align-items: center;
-  background-image: url(https://picsum.photos/800/500);
+  background: url(https://picsum.photos/800/500);
   background-size: cover;
   display: flex;
-  background-repeat: no-repeat;
-  background-position: top center;
   height: 25vh;
   justify-content: center;
+  min-height: 50vh;
 }
-
 .btn {
   background: grey;
   border-radius: var(--base-spacing);
@@ -122,6 +123,9 @@ section .btn {
   background: grey;
   display: inline-block;
   margin: var(--base-spacing);
+  margin-top: auto;
+  max-width: calc(var(--base-spacing) * 15);
+  text-align: center;
 }
 
 .is-hidden--mobile {
@@ -154,16 +158,6 @@ footer p {
   header {
     flex-direction: row;
   }
-}
-
-.hero {
-  background-image: url(https://picsum.photos/1800/1500);
-  min-height: 50vh;
-}
-section .btn {
-  margin-top: auto;
-  max-width: calc(var(--base-spacing) * 15);
-  text-align: center;
 }
 
 .flex--desktop {
