@@ -31,6 +31,21 @@ section:nth-of-type(odd) {
   background: var(--primary);
 }
 
+label,
+input {
+  margin: var(--base-spacing) * 20;
+}
+
+input {
+  width: 80vw;
+}
+
+header,
+form,
+input[type="select"] {
+  display: flex;
+}
+
 header,
 nav {
   padding: calc(var(--base-spacing) * 2);
@@ -76,9 +91,10 @@ nav li {
 
 nav,
 a,
-p {
+p,
+label {
   text-decoration: none;
-  color: white;
+  color:grey;
 }
 
 .fas {
@@ -99,6 +115,15 @@ h2 {
 }
 h3 {
   font-size: 1.953em;
+}
+form {
+  flex-direction: column;
+  padding: calc(var(--base-spacing) * 2);
+}
+
+input[type="submit"] {
+  justify-content: center;
+  width: calc(var(--base-spacing) * 10);
 }
 
 .hero {
