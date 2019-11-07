@@ -94,7 +94,7 @@ a,
 p,
 label {
   text-decoration: none;
-  color:grey;
+  color:white;
 }
 
 .fas {
@@ -159,10 +159,10 @@ section .btn {
 }
 footer,
 footer a {
-  color: white;
+  color: grey;
 }
 footer {
-  color: white;
+  color: grey;
   padding: var(--base-spacing);
 }
 footer ul {
