@@ -7,13 +7,13 @@ import {Header, Nav, Footer, Main} from "./components";
 const state = {
   Home : {
     heading: "Ryan's Practice Project From State"
-  }
+  },
   About : {
     heading: "About Page"
-  }
+  },
   Contact : {
     heading: "Contact Page"
-  }
+  },
   Blog : {
     heading: "Blog Page"
   }
@@ -25,3 +25,14 @@ ${Nav()}
 ${Main()}
 ${Footer()}
 `
+
+// console.log(document.querySelectorAll('click', function(event)));
+// event.preventDefault();
+
+document.querySelectorAll('nav a, footer a').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+
+    console.log('click');
+  })
+})
