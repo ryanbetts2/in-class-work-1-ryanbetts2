@@ -1,4 +1,4 @@
-export default function({heading}) {
+export default function({ heading }) {
   return `
     <header>
       <figure>

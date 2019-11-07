@@ -19,20 +19,26 @@ const state = {
   }
 }
 
+function render(st) {
 document.querySelector("#root").innerHTML = `
-${Header(state.Home)}
+${Header(st)}
 ${Nav()}
 ${Main()}
 ${Footer()}
-`
+`;
 
 // console.log(document.querySelectorAll('click', function(event)));
 // event.preventDefault();
 
-document.querySelectorAll('nav a, footer a').forEach(link => {
+const links = document.querySelectorAll('nav a, footer a');
+links.forEach(link => {
+  console.log(link);
   link.addEventListener('click', event => {
     event.preventDefault();
 
-    console.log(state[event.target.textContent].heading);
-  })
-})
+    render(state[event.target.textContent]);
+  });
+});
+}
+
+render(state.Home);
