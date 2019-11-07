@@ -159,10 +159,10 @@ section .btn {
 }
 footer,
 footer a {
-  color: grey;
+  color: white;
 }
 footer {
-  color: grey;
+  color: white;
   padding: var(--base-spacing);
 }
 footer ul {

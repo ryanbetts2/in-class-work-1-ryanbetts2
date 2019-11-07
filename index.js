@@ -33,6 +33,6 @@ document.querySelectorAll('nav a, footer a').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
 
-    console.log('click');
+    console.log(state[event.target.textContent].heading);
   })
 })
