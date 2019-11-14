@@ -1,3 +1,4 @@
 export default {
-  heading: "Blog Page"
+  heading: "Blog Page",
+  view: "Blog"
 }

@@ -13,7 +13,7 @@ export default function({ heading }) {
         alt=""
       />
   </figure>
-  <h1>${heading}</h1>
+  <h1>${ heading }</h1>
 </header>
   `
 }

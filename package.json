@@ -4,7 +4,8 @@
   "description": "Practice project for Savvy Coders",
   "main": "index.html",
   "scripts": {
-    "serve": "npx parcel index.html"
+    "serve": "npx parcel index.html",
+    "build": "parcel build index.html && cp _redirects ./dist/"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/manavm1990/savvy-coders-portfolio#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",

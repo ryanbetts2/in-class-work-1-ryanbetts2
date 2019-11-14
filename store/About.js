@@ -1,1 +1,2 @@
-export default { heading: "About Page" }
+export default { heading: "About Page" ,
+view: "About"}
