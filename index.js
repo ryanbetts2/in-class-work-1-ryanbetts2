@@ -4,21 +4,7 @@ import {Header, Nav, Footer, Main} from "./components";
 // console.log(Footer());
 // console.log(Main());
 
-const state = {
-  Home : {
-    heading: "Ryan's Practice Project From State",
-    links: ["Home", "About", "Contact", "Blog"]
-  },
-  About : {
-    heading: "About Page"
-  },
-  Contact : {
-    heading: "Contact Page"
-  },
-  Blog : {
-    heading: "Blog Page"
-  }
-}
+import * as state from "./store";
 
 function render(st) {
 document.querySelector("#root").innerHTML = `
