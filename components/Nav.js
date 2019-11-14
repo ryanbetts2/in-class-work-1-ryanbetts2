@@ -1,4 +1,11 @@
-export default function() {
+function generateListMarkup(links) {
+  return links.map(link => {
+  return `<li><a href="./">${link}</a></li>`
+  }).join(" ");
+}
+
+export default function(st) {
+
   return `
   <!-- <nav> should be only be used for the main navigation for the page. -->
   <nav>
@@ -10,7 +17,9 @@ export default function() {
       <li><a href="./about/">About</a></li>
       <li><a href="./contact/">Contact</a></li>
       <li><a href="./blog/">Blog</a></li>
-    </ul>
+
+    ${generateListMarkup(st.links)}
+      </ul>
   </nav>
   `
 }

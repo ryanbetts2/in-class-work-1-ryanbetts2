@@ -6,7 +6,8 @@ import {Header, Nav, Footer, Main} from "./components";
 
 const state = {
   Home : {
-    heading: "Ryan's Practice Project From State"
+    heading: "Ryan's Practice Project From State",
+    links: ["Home", "About", "Contact", "Blog"]
   },
   About : {
     heading: "About Page"
@@ -22,7 +23,7 @@ const state = {
 function render(st) {
 document.querySelector("#root").innerHTML = `
 ${Header(st)}
-${Nav()}
+${Nav(st)}
 ${Main()}
 ${Footer()}
 `;
